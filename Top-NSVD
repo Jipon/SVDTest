@@ -28,7 +28,7 @@ def get_top_n(predictions, n=10):
     # First map the predictions to each user.，这句默认的list类型
     top_n = defaultdict(list)
     
-    #uid为用户id，iid为项目id，true_r不太清楚，est为分解后的估值
+    #uid为用户id，iid为项目id，est为分解后的估值
     for uid, iid, true_r, est, _ in predictions:
         top_n[uid].append((iid, est))
 
